@@ -1,6 +1,6 @@
 import os, sys, shutil, json, re, platform, subprocess
 
-from core.system import directory
+from pp_core.pp_system import pp_directory
 
 
 
@@ -164,7 +164,7 @@ def find_files_with_name(input, name, files = None, recursive = False):
         Variable name can be a list of names or a singular string.
         Returns a list of paths that match.
     """
-    recursive_valid = recursive and tf_directory.find_in_path(input)
+    recursive_valid = recursive and pp_directory.find_in_path(input)
     list_valid = not recursive
     valid = recursive_valid or list_valid
 

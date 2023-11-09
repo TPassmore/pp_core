@@ -1,6 +1,6 @@
 import os, sys, re, shutil, subprocess
 
-from core.system import mo_file
+from pp_core.pp_system import pp_file
 
 
 
@@ -36,7 +36,7 @@ def list_files(path, extension=None):
         if type(path) == str:
             directory = os.listdir(path)
 
-        directory = [file if tf_file.get_extension(file) == extension else None for file in directory]
+        directory = [file if pp_file.get_extension(file) == extension else None for file in directory]
         directory = list(filter(lambda file: file is not None, directory))
 
         return directory
