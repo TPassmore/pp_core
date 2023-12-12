@@ -5,11 +5,11 @@ import signal
 
 
 
-def log(msg):     return "[TrailerFarm] %s [Log    ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
-def error(msg):   return "[TrailerFarm] %s [Error  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
-def warning(msg): return "[TrailerFarm] %s [Warning]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
-def debug(msg):   return "[TrailerFarm] %s [Debug  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
-def fatal(msg):   return "[TrailerFarm] %s [Fatal  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
+def log(msg):     return "%s [Log    ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
+def error(msg):   return "%s [Error  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
+def warning(msg): return "%s [Warning]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
+def debug(msg):   return "%s [Debug  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
+def fatal(msg):   return "%s [Fatal  ]: %s" % (datetime.now().strftime("[%d/%m/%Y] [%H:%M:%S]"), msg)
 
 def print_log(msg): print(log(msg))
 def print_error(msg): print(error(msg))
@@ -30,5 +30,3 @@ def kill_pid(pid):
     except Exception as e:
         print(e)
 
-# def get_system_os():
-#     return sys.platform()
